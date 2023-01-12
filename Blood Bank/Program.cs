@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blood_Bank.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace Blood_Bank
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dash());
+
+            var login = new Login();
+            login.ShowDialog();
+            if (login.Issucced)
+                Application.Run(new Dash());
+            else 
+                Application.Exit();
         }
     }
 }

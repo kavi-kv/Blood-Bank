@@ -12,7 +12,7 @@ namespace Blood_Bank.Controller
     {
         public string name { get; set; }
         public string bloodType { get; set; }
-        public int phoneNum { get; set; }
+        public long phoneNum { get; set; }
         public string address { get; set; }
         public string sex { get; set; }
         public DateTime dateOfDonation { get; set; }
@@ -20,7 +20,7 @@ namespace Blood_Bank.Controller
         public int donorAge { get; set; }
 
         public Donor() { }
-        public Donor(string name,string bloodType,int phoneNum,string address,string sex,DateTime dateOfDonation,int quantity,int donorAge) 
+        public Donor(string name,string bloodType, long phoneNum,string address,string sex,DateTime dateOfDonation,int quantity,int donorAge) 
         {
             this.name = name;
             this.bloodType = bloodType;

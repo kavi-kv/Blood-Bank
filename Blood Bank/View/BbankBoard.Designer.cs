@@ -41,26 +41,27 @@
             this.BPos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label4 = new System.Windows.Forms.Label();
             this.ABPos = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.OPos = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label8 = new System.Windows.Forms.Label();
             this.ONeg = new System.Windows.Forms.Label();
+            this.lbl7 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label10 = new System.Windows.Forms.Label();
             this.ABNeg = new System.Windows.Forms.Label();
+            this.lbl8 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label12 = new System.Windows.Forms.Label();
             this.BNeg = new System.Windows.Forms.Label();
+            this.lbl9 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label14 = new System.Windows.Forms.Label();
             this.ANeg = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bBankDtaView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.transferBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.bloodLayout.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel2.SuspendLayout();
@@ -163,8 +164,8 @@
             // guna2ShadowPanel3
             // 
             this.guna2ShadowPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel3.Controls.Add(this.label4);
             this.guna2ShadowPanel3.Controls.Add(this.ABPos);
+            this.guna2ShadowPanel3.Controls.Add(this.lbl4);
             this.guna2ShadowPanel3.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel3.Location = new System.Drawing.Point(295, 3);
             this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
@@ -175,31 +176,31 @@
             this.guna2ShadowPanel3.Size = new System.Drawing.Size(140, 105);
             this.guna2ShadowPanel3.TabIndex = 2;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(73, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "00";
-            // 
             // ABPos
             // 
             this.ABPos.AutoSize = true;
-            this.ABPos.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ABPos.Location = new System.Drawing.Point(16, 41);
+            this.ABPos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ABPos.Location = new System.Drawing.Point(73, 41);
             this.ABPos.Name = "ABPos";
-            this.ABPos.Size = new System.Drawing.Size(42, 21);
-            this.ABPos.TabIndex = 1;
-            this.ABPos.Text = "AB+";
+            this.ABPos.Size = new System.Drawing.Size(25, 20);
+            this.ABPos.TabIndex = 2;
+            this.ABPos.Text = "00";
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.Location = new System.Drawing.Point(16, 41);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(42, 21);
+            this.lbl4.TabIndex = 1;
+            this.lbl4.Text = "AB+";
             // 
             // guna2ShadowPanel4
             // 
             this.guna2ShadowPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel4.Controls.Add(this.label6);
             this.guna2ShadowPanel4.Controls.Add(this.OPos);
+            this.guna2ShadowPanel4.Controls.Add(this.lbl6);
             this.guna2ShadowPanel4.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel4.Location = new System.Drawing.Point(441, 3);
             this.guna2ShadowPanel4.Name = "guna2ShadowPanel4";
@@ -210,31 +211,31 @@
             this.guna2ShadowPanel4.Size = new System.Drawing.Size(140, 105);
             this.guna2ShadowPanel4.TabIndex = 3;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(73, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "00";
-            // 
             // OPos
             // 
             this.OPos.AutoSize = true;
-            this.OPos.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OPos.Location = new System.Drawing.Point(16, 41);
+            this.OPos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPos.Location = new System.Drawing.Point(73, 41);
             this.OPos.Name = "OPos";
-            this.OPos.Size = new System.Drawing.Size(33, 21);
-            this.OPos.TabIndex = 1;
-            this.OPos.Text = "O+";
+            this.OPos.Size = new System.Drawing.Size(25, 20);
+            this.OPos.TabIndex = 2;
+            this.OPos.Text = "00";
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl6.Location = new System.Drawing.Point(16, 41);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(33, 21);
+            this.lbl6.TabIndex = 1;
+            this.lbl6.Text = "O+";
             // 
             // guna2ShadowPanel5
             // 
             this.guna2ShadowPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel5.Controls.Add(this.label8);
             this.guna2ShadowPanel5.Controls.Add(this.ONeg);
+            this.guna2ShadowPanel5.Controls.Add(this.lbl7);
             this.guna2ShadowPanel5.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel5.Location = new System.Drawing.Point(587, 3);
             this.guna2ShadowPanel5.Name = "guna2ShadowPanel5";
@@ -245,31 +246,31 @@
             this.guna2ShadowPanel5.Size = new System.Drawing.Size(140, 105);
             this.guna2ShadowPanel5.TabIndex = 4;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(73, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(25, 20);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "00";
-            // 
             // ONeg
             // 
             this.ONeg.AutoSize = true;
-            this.ONeg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ONeg.Location = new System.Drawing.Point(16, 41);
+            this.ONeg.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ONeg.Location = new System.Drawing.Point(73, 41);
             this.ONeg.Name = "ONeg";
-            this.ONeg.Size = new System.Drawing.Size(28, 21);
-            this.ONeg.TabIndex = 1;
-            this.ONeg.Text = "O-";
+            this.ONeg.Size = new System.Drawing.Size(25, 20);
+            this.ONeg.TabIndex = 2;
+            this.ONeg.Text = "00";
+            // 
+            // lbl7
+            // 
+            this.lbl7.AutoSize = true;
+            this.lbl7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl7.Location = new System.Drawing.Point(16, 41);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(28, 21);
+            this.lbl7.TabIndex = 1;
+            this.lbl7.Text = "O-";
             // 
             // guna2ShadowPanel6
             // 
             this.guna2ShadowPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel6.Controls.Add(this.label10);
             this.guna2ShadowPanel6.Controls.Add(this.ABNeg);
+            this.guna2ShadowPanel6.Controls.Add(this.lbl8);
             this.guna2ShadowPanel6.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel6.Location = new System.Drawing.Point(733, 3);
             this.guna2ShadowPanel6.Name = "guna2ShadowPanel6";
@@ -280,31 +281,31 @@
             this.guna2ShadowPanel6.Size = new System.Drawing.Size(140, 105);
             this.guna2ShadowPanel6.TabIndex = 5;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(73, 41);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(25, 20);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "00";
-            // 
             // ABNeg
             // 
             this.ABNeg.AutoSize = true;
-            this.ABNeg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ABNeg.Location = new System.Drawing.Point(16, 41);
+            this.ABNeg.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ABNeg.Location = new System.Drawing.Point(73, 41);
             this.ABNeg.Name = "ABNeg";
-            this.ABNeg.Size = new System.Drawing.Size(37, 21);
-            this.ABNeg.TabIndex = 1;
-            this.ABNeg.Text = "AB-";
+            this.ABNeg.Size = new System.Drawing.Size(25, 20);
+            this.ABNeg.TabIndex = 2;
+            this.ABNeg.Text = "00";
+            // 
+            // lbl8
+            // 
+            this.lbl8.AutoSize = true;
+            this.lbl8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl8.Location = new System.Drawing.Point(16, 41);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(37, 21);
+            this.lbl8.TabIndex = 1;
+            this.lbl8.Text = "AB-";
             // 
             // guna2ShadowPanel7
             // 
             this.guna2ShadowPanel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel7.Controls.Add(this.label12);
             this.guna2ShadowPanel7.Controls.Add(this.BNeg);
+            this.guna2ShadowPanel7.Controls.Add(this.lbl9);
             this.guna2ShadowPanel7.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel7.Location = new System.Drawing.Point(879, 3);
             this.guna2ShadowPanel7.Name = "guna2ShadowPanel7";
@@ -315,31 +316,31 @@
             this.guna2ShadowPanel7.Size = new System.Drawing.Size(140, 105);
             this.guna2ShadowPanel7.TabIndex = 6;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(73, 41);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 20);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "00";
-            // 
             // BNeg
             // 
             this.BNeg.AutoSize = true;
-            this.BNeg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BNeg.Location = new System.Drawing.Point(16, 41);
+            this.BNeg.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BNeg.Location = new System.Drawing.Point(73, 41);
             this.BNeg.Name = "BNeg";
-            this.BNeg.Size = new System.Drawing.Size(26, 21);
-            this.BNeg.TabIndex = 1;
-            this.BNeg.Text = "B-";
+            this.BNeg.Size = new System.Drawing.Size(25, 20);
+            this.BNeg.TabIndex = 2;
+            this.BNeg.Text = "00";
+            // 
+            // lbl9
+            // 
+            this.lbl9.AutoSize = true;
+            this.lbl9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl9.Location = new System.Drawing.Point(16, 41);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(26, 21);
+            this.lbl9.TabIndex = 1;
+            this.lbl9.Text = "B-";
             // 
             // guna2ShadowPanel8
             // 
             this.guna2ShadowPanel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel8.Controls.Add(this.label14);
             this.guna2ShadowPanel8.Controls.Add(this.ANeg);
+            this.guna2ShadowPanel8.Controls.Add(this.lbl10);
             this.guna2ShadowPanel8.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel8.Location = new System.Drawing.Point(1025, 3);
             this.guna2ShadowPanel8.Name = "guna2ShadowPanel8";
@@ -350,25 +351,25 @@
             this.guna2ShadowPanel8.Size = new System.Drawing.Size(140, 105);
             this.guna2ShadowPanel8.TabIndex = 7;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(73, 41);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(25, 20);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "00";
-            // 
             // ANeg
             // 
             this.ANeg.AutoSize = true;
-            this.ANeg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ANeg.Location = new System.Drawing.Point(16, 41);
+            this.ANeg.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ANeg.Location = new System.Drawing.Point(73, 41);
             this.ANeg.Name = "ANeg";
-            this.ANeg.Size = new System.Drawing.Size(27, 21);
-            this.ANeg.TabIndex = 1;
-            this.ANeg.Text = "A-";
+            this.ANeg.Size = new System.Drawing.Size(25, 20);
+            this.ANeg.TabIndex = 2;
+            this.ANeg.Text = "00";
+            // 
+            // lbl10
+            // 
+            this.lbl10.AutoSize = true;
+            this.lbl10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl10.Location = new System.Drawing.Point(16, 41);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(27, 21);
+            this.lbl10.TabIndex = 1;
+            this.lbl10.Text = "A-";
             // 
             // guna2PictureBox1
             // 
@@ -473,11 +474,29 @@
             this.transferBtn.Text = "Transfer";
             this.transferBtn.Click += new System.EventHandler(this.transferBtn_Click);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(887, 142);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(118, 45);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "Transfer";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // BbankBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.transferBtn);
             this.Controls.Add(this.bBankDtaView);
             this.Controls.Add(this.bloodLayout);
@@ -518,25 +537,26 @@
         private System.Windows.Forms.Label BPos;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label ABPos;
+        private System.Windows.Forms.Label lbl4;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label OPos;
+        private System.Windows.Forms.Label lbl6;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel5;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label ONeg;
+        private System.Windows.Forms.Label lbl7;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel6;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label ABNeg;
+        private System.Windows.Forms.Label lbl8;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel7;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label BNeg;
+        private System.Windows.Forms.Label lbl9;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel8;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label ANeg;
+        private System.Windows.Forms.Label lbl10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2DataGridView bBankDtaView;
         private Guna.UI2.WinForms.Guna2Button transferBtn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Blood_Bank.Controller;
+using Blood_Bank.Overall;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,13 +46,22 @@ namespace Blood_Bank.View
             }
             else
             {
-                var trn = new Trans(bId, quantity, bloodGroup, type, txtHospital.Text, txtBloodGroup.Text);
+                var trn = new Trans(bId, quantity, bloodGroup, type, txtHospital.Text, txtStaffName.Text);
                 trn.addToTr();
                 if (trn.QueryHasError)
                     Overall.Messages.ShowMessage(trn.ErrorMessage, "Error", "error");
                 else
                 {
                     MessageBox.Show($"Succesfully transfared {quantity} to {txtHospital.Text}");
+                    var newData = Main.ReadData<string>("readFromBbank");
+                    //BbankBoard.BankDtaView.DataSource = newData;
+                    //BbankBoard.BankDtaView.Refresh();
+                    Transaction.transView.DataSource = Main.ReadData<string>("readTrans");
+                    //Shared.Dash.getBankRef().fromBloodGroup();
+                    Shared.fromBloodGroup();
+                    //var bBnk = new BbankBoard();
+                    //bBnk.fromBloodGroup();
+                    this.Close();
                 }
             }
         }

@@ -88,7 +88,7 @@
             this.transDtaView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.transDtaView.RowHeadersVisible = false;
             this.transDtaView.RowTemplate.Height = 39;
-            this.transDtaView.Size = new System.Drawing.Size(1162, 464);
+            this.transDtaView.Size = new System.Drawing.Size(1162, 469);
             this.transDtaView.TabIndex = 0;
             this.transDtaView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Amethyst;
             this.transDtaView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(205)))), ((int)(((byte)(233)))));
@@ -130,17 +130,34 @@
             // disMonthComBx
             // 
             this.disMonthComBx.BackColor = System.Drawing.Color.Transparent;
+            this.disMonthComBx.BorderRadius = 5;
             this.disMonthComBx.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.disMonthComBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.disMonthComBx.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.disMonthComBx.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.disMonthComBx.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.disMonthComBx.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.disMonthComBx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.disMonthComBx.ItemHeight = 30;
-            this.disMonthComBx.Location = new System.Drawing.Point(11, 98);
+            this.disMonthComBx.Items.AddRange(new object[] {
+            "Select Months",
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.disMonthComBx.Location = new System.Drawing.Point(14, 98);
             this.disMonthComBx.Name = "disMonthComBx";
-            this.disMonthComBx.Size = new System.Drawing.Size(179, 36);
+            this.disMonthComBx.Size = new System.Drawing.Size(209, 36);
+            this.disMonthComBx.StartIndex = 0;
             this.disMonthComBx.TabIndex = 4;
+            this.disMonthComBx.SelectedIndexChanged += new System.EventHandler(this.disMonthComBx_SelectedIndexChanged);
             // 
             // Transaction
             // 

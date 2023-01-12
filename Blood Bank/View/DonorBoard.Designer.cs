@@ -39,7 +39,7 @@
             this.viewDnrDta = new Guna.UI2.WinForms.Guna2DataGridView();
             this.regDonorPnl = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.testDated = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.ageTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.saveDonorBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -167,7 +167,7 @@
             this.viewDnrDta.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.viewDnrDta.RowHeadersVisible = false;
             this.viewDnrDta.RowTemplate.Height = 44;
-            this.viewDnrDta.Size = new System.Drawing.Size(1155, 543);
+            this.viewDnrDta.Size = new System.Drawing.Size(1155, 532);
             this.viewDnrDta.TabIndex = 20;
             this.viewDnrDta.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Carrot;
             this.viewDnrDta.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
@@ -197,7 +197,7 @@
             this.regDonorPnl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.regDonorPnl.BackColor = System.Drawing.Color.Transparent;
             this.regDonorPnl.Controls.Add(this.label10);
-            this.regDonorPnl.Controls.Add(this.guna2DateTimePicker1);
+            this.regDonorPnl.Controls.Add(this.testDated);
             this.regDonorPnl.Controls.Add(this.ageTxt);
             this.regDonorPnl.Controls.Add(this.label9);
             this.regDonorPnl.Controls.Add(this.saveDonorBtn);
@@ -238,19 +238,19 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Last Tested Date";
             // 
-            // guna2DateTimePicker1
+            // testDated
             // 
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(392, 350);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(215, 36);
-            this.guna2DateTimePicker1.TabIndex = 18;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2022, 12, 26, 22, 42, 37, 932);
+            this.testDated.BorderRadius = 5;
+            this.testDated.Checked = true;
+            this.testDated.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testDated.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.testDated.Location = new System.Drawing.Point(392, 350);
+            this.testDated.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.testDated.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.testDated.Name = "testDated";
+            this.testDated.Size = new System.Drawing.Size(215, 36);
+            this.testDated.TabIndex = 18;
+            this.testDated.Value = new System.DateTime(2022, 12, 26, 22, 42, 37, 932);
             // 
             // ageTxt
             // 
@@ -292,6 +292,7 @@
             this.saveDonorBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.saveDonorBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.saveDonorBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.saveDonorBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(28)))), ((int)(((byte)(78)))));
             this.saveDonorBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveDonorBtn.ForeColor = System.Drawing.Color.White;
             this.saveDonorBtn.Location = new System.Drawing.Point(377, 426);
@@ -471,11 +472,11 @@
             this.phoneNumTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.phoneNumTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.phoneNumTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneNumTxt.Location = new System.Drawing.Point(62, 280);
+            this.phoneNumTxt.Location = new System.Drawing.Point(58, 280);
             this.phoneNumTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.phoneNumTxt.Name = "phoneNumTxt";
             this.phoneNumTxt.PasswordChar = '\0';
-            this.phoneNumTxt.PlaceholderText = "Phone Number";
+            this.phoneNumTxt.PlaceholderText = "eg. 615560729";
             this.phoneNumTxt.SelectedText = "";
             this.phoneNumTxt.Size = new System.Drawing.Size(215, 44);
             this.phoneNumTxt.TabIndex = 3;
@@ -556,9 +557,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.regDonorPnl);
             this.Controls.Add(this.searchDonorTxt);
             this.Controls.Add(this.DonorCombo);
+            this.Controls.Add(this.regDonorPnl);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.viewDnrDta);
             this.Name = "DonorBoard";
@@ -581,7 +582,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView viewDnrDta;
         private Guna.UI2.WinForms.Guna2ShadowPanel regDonorPnl;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker testDated;
         private Guna.UI2.WinForms.Guna2TextBox ageTxt;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Button saveDonorBtn;

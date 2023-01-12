@@ -10,7 +10,8 @@ namespace Blood_Bank.Connection
 {
     public class Connections
     {
-        public  SqlConnection GetSqlConnection()
+
+        public SqlConnection GetSqlConnection()
         {
             string dtabaseName = "BB.mdf";
             string actualPath = AppDomain.CurrentDomain.BaseDirectory.ToLower().Replace("\\bin", "").Replace("\\debug", "").Trim('\\');
@@ -20,5 +21,9 @@ namespace Blood_Bank.Connection
 
             return sqlConnection;
         }
+
+
     }
+
+
 }

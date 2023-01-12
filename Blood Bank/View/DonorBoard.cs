@@ -18,6 +18,12 @@ namespace Blood_Bank.View
         public string dName { get; set; }
         public int dNum { get; set; }
         public string status { get; set; } 
+
+
+        public string existedDonorName { get; set; }
+        public string existedDonorBlood { get; set; }
+        public string existedDonorAddress { get; set; }
+        public string existedDonorSex { get; set; }
         public DonorBoard()
         {
             InitializeComponent();
@@ -52,8 +58,8 @@ namespace Blood_Bank.View
             //dNum = Convert.ToInt32(viewDnrDta.SelectedRows[0].Cells[3].Value);
             //dName =  viewDnrDta.SelectedRows[0].Cells[1].Value.ToString();
             //searchDonorTxt.Visible = false;
-
-            viewDnrDta.DataSource = Overall.Main.ReadData<string>("readDonor");
+            if (!this.DesignMode)
+                viewDnrDta.DataSource = Overall.Main.ReadData<string>("readDonor");
             //viewDnrDta.Visible = true;
             searchDonorTxt.Visible = false;
         }
@@ -99,30 +105,37 @@ namespace Blood_Bank.View
                 }
                 else
                 {
-                    MessageBox.Show("Successfull");
+                    
+                    
+                    if (!InputValidations.isNumValid(phoneNumTxt.Text))
+                    {
+                        MessageBox.Show("Phone Number is too short");
+                    }
+                    else
+                    {
+                        Int64 phoneNum = Convert.ToInt64(phoneNumTxt.Text);
+                        var donor = new Donor(fullName, bloodGroupCombo.Text, phoneNum, addressTxt.Text, genderCombo.Text, dataTime, Convert.ToInt32(quantityTxt.Text), Convert.ToInt16(ageTxt.Text));
+                        donor.RegisterDonor();
+                        if (donor.QueryHasError)
+                            Messages.ShowMessage(donor.ErrorMessage, "Error", "error");
+                        else
+                        {
+                            MessageBox.Show($"Successfully registered a donor with name of {fullName}");
+                            viewDnrDta.DataSource = Overall.Main.ReadData<string>("readDonor");
+                            BloodBoard.viewDta.DataSource = Overall.Main.ReadData<string>("readFromBlood");
+                            clearTxt();
+                        }
+                    }
                 }
             }
-                //var donor = new Donor(fullName, bloodGroupCombo.Text, Convert.ToInt32(phoneNumTxt.Text), addressTxt.Text, genderCombo.Text, dataTime, Convert.ToInt32(quantityTxt.Text), Convert.ToInt16(ageTxt.Text));
-                //donor.RegisterDonor();
-                //if (donor.QueryHasError)
-                //    Messages.ShowMessage(donor.ErrorMessage, "Error", "error");
-                //else
-                //{
-                //    MessageBox.Show($"Successfully registered a donor with name of {fullName}");
-                //    viewDnrDta.DataSource = Overall.Main.ReadData<string>("readDonor");
-                //    BloodBoard.viewDta.DataSource = Overall.Main.ReadData<string>("readFromBlood");
-                //    clearTxt();
-                //}
-                //}
                 
-            //}
         }
 
         private void phoneNumTxt_TextChanged(object sender, EventArgs e)
         {
 
             Int64 value;
-            phoneNumTxt.MaxLength = 10;
+            phoneNumTxt.MaxLength = 9;
             if(!Int64.TryParse(phoneNumTxt.Text, out value)) 
             {
                 phoneNumTxt.Clear();
@@ -174,6 +187,7 @@ namespace Blood_Bank.View
                 e.Handled = true;
             }
         }
+
     }
  }
 

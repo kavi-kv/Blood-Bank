@@ -18,6 +18,7 @@ namespace Blood_Bank.View
         private string bloodGroup { get; set; }
         private int bloodId { get; set; }
         private double quantity { get; set; }
+        private Int64 phone { get; set; }
         public BloodBoard()
         {
             InitializeComponent();
@@ -26,31 +27,58 @@ namespace Blood_Bank.View
 
         private void BloodBoard_Load(object sender, EventArgs e)
         {
-            bloodDtaView.DataSource = Overall.Main.ReadData<string>("readFromBlood");
+            if (!this.DesignMode)
+                bloodDtaView.DataSource = Overall.Main.ReadData<string>("readFromBlood");
         }
 
         private void bloodDtaView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             bloodId = (int)bloodDtaView.SelectedRows[0].Cells["bloodId"].Value;
+            phone = (int)bloodDtaView.SelectedRows[0].Cells[2].Value;
             quantity = (double)bloodDtaView.SelectedRows[0].Cells["quantity"].Value;
             bloodGroup = bloodDtaView.SelectedRows[0].Cells["bloodType"].Value.ToString();
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
+            if (bloodDtaView.SelectedRows.Count > 0)
+            {
+                Alert al = new Alert($"Do you want to add the donation with the id {bloodId} to the Blood Bank", "Add");
+                al.ShowDialog();
+                 if (al.IsYes != null && !al.IsYes.Value) return;
+                    var blood = new Blood(bloodId, quantity, bloodGroup);
+                    blood.AddtoBBank();
+                    if (blood.QueryHasError)
+                        Messages.ShowMessage(blood.ErrorMessage, "Error", "error");
+                    else
+                    {
+                        MessageBox.Show("Successfully Confirmed");
+                        var newData = Main.ReadData<string>("readFromBbank");
+                    BbankBoard.BankDtaView.DataSource = newData;
+                    BbankBoard.BankDtaView.Refresh();
+                    bloodDtaView.DataSource = Main.ReadData<string>("readFromBlood");
+                       Shared.fromBloodGroup();
+                    }
+            }
+
+        }
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show($"Do you want to delete the donation with the id {bloodId}","Delete",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if(bloodDtaView.SelectedRows.Count > 0)
             {
-                var blood = new Blood(bloodId,quantity,bloodGroup);
-                blood.AddtoBBank();
-                if (blood.QueryHasError)
-                    Messages.ShowMessage(blood.ErrorMessage, "Error", "error");
-                else 
+                if (dialogResult == DialogResult.No)
+                    return;
+                else
                 {
-                    MessageBox.Show("Successfully Confirmed");
+                    MessageBox.Show("Successfully Deleted the donation");
+                    Main.deleteDonorBlood<Int64>(phone);
                     bloodDtaView.DataSource = Main.ReadData<string>("readFromBlood");
                 }
             }
         }
+
+        
     }
 
     }
