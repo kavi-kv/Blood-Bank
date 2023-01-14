@@ -74,16 +74,5 @@ namespace Blood_Bank.View
             bloodGroup = bBankDtaView.SelectedRows[0].Cells["bloodGroup"].Value.ToString();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-           //try
-            //{
-            //    bBankDtaView.DataSource = Main.ReadData<string>("readFromBbank");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-        }
     }
 }

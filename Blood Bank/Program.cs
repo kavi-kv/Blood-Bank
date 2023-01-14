@@ -17,12 +17,12 @@ namespace Blood_Bank
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            //Application.Run(new SingleDonReport());
             var login = new Login();
             login.ShowDialog();
             if (login.Issucced)
                 Application.Run(new Dash());
-            else 
+            else
                 Application.Exit();
         }
     }

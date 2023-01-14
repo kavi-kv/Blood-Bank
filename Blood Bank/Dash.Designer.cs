@@ -31,8 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dash));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtFullName = new System.Windows.Forms.Label();
+            this.CompanyName = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userIcon = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.donorDashBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.settingBtn = new Guna.UI2.WinForms.Guna2Button();
             this.logOutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userBtn = new Guna.UI2.WinForms.Guna2Button();
             this.staffBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -40,15 +47,9 @@
             this.bloodBnkBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bloodBtn = new Guna.UI2.WinForms.Guna2Button();
             this.dashBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.saaFormControlBox1 = new SaaUI.SaaFormControlBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtFullName = new System.Windows.Forms.Label();
-            this.CompanyName = new System.Windows.Forms.Label();
-            this.userIcon = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.donorDashBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.reportsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.reports1 = new Blood_Bank.View.Reports();
             this.userBoard1 = new Blood_Bank.View.UserBoard();
             this.dashBoard1 = new Blood_Bank.View.DashBoard();
             this.staffBoard1 = new Blood_Bank.View.StaffBoard();
@@ -57,19 +58,19 @@
             this.donorBoard2 = new Blood_Bank.View.DonorBoard();
             this.bloodBoard2 = new Blood_Bank.View.BloodBoard();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(28)))), ((int)(((byte)(78)))));
             this.guna2Panel1.Controls.Add(this.donorDashBtn);
-            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2Panel1.Controls.Add(this.settingBtn);
             this.guna2Panel1.Controls.Add(this.logOutBtn);
+            this.guna2Panel1.Controls.Add(this.reportsBtn);
             this.guna2Panel1.Controls.Add(this.userBtn);
             this.guna2Panel1.Controls.Add(this.staffBtn);
             this.guna2Panel1.Controls.Add(this.transBtn);
@@ -83,181 +84,14 @@
             this.guna2Panel1.Size = new System.Drawing.Size(188, 767);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2CirclePictureBox1
+            // guna2Panel3
             // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(55, 43);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(90, 90);
-            this.guna2CirclePictureBox1.TabIndex = 7;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // settingBtn
-            // 
-            this.settingBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.settingBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.settingBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.settingBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.settingBtn.FillColor = System.Drawing.Color.Transparent;
-            this.settingBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.settingBtn.ForeColor = System.Drawing.Color.White;
-            this.settingBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingBtn.Image")));
-            this.settingBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.settingBtn.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.settingBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.settingBtn.Location = new System.Drawing.Point(0, 663);
-            this.settingBtn.Name = "settingBtn";
-            this.settingBtn.Size = new System.Drawing.Size(188, 45);
-            this.settingBtn.TabIndex = 6;
-            this.settingBtn.Text = "Setting";
-            this.settingBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // logOutBtn
-            // 
-            this.logOutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logOutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logOutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logOutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logOutBtn.FillColor = System.Drawing.Color.Transparent;
-            this.logOutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
-            this.logOutBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.logOutBtn.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.logOutBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.logOutBtn.Location = new System.Drawing.Point(1, 717);
-            this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(188, 45);
-            this.logOutBtn.TabIndex = 6;
-            this.logOutBtn.Text = "Log Out";
-            this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
-            // 
-            // userBtn
-            // 
-            this.userBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.userBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.userBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.userBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.userBtn.FillColor = System.Drawing.Color.Transparent;
-            this.userBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.userBtn.ForeColor = System.Drawing.Color.White;
-            this.userBtn.Image = ((System.Drawing.Image)(resources.GetObject("userBtn.Image")));
-            this.userBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.userBtn.ImageOffset = new System.Drawing.Point(-6, 0);
-            this.userBtn.ImageSize = new System.Drawing.Size(33, 33);
-            this.userBtn.Location = new System.Drawing.Point(0, 535);
-            this.userBtn.Name = "userBtn";
-            this.userBtn.Size = new System.Drawing.Size(185, 45);
-            this.userBtn.TabIndex = 6;
-            this.userBtn.Text = "Users";
-            this.userBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
-            // 
-            // staffBtn
-            // 
-            this.staffBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.staffBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.staffBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.staffBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.staffBtn.FillColor = System.Drawing.Color.Transparent;
-            this.staffBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.staffBtn.ForeColor = System.Drawing.Color.White;
-            this.staffBtn.Image = ((System.Drawing.Image)(resources.GetObject("staffBtn.Image")));
-            this.staffBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.staffBtn.ImageOffset = new System.Drawing.Point(-6, 0);
-            this.staffBtn.ImageSize = new System.Drawing.Size(33, 33);
-            this.staffBtn.Location = new System.Drawing.Point(0, 473);
-            this.staffBtn.Name = "staffBtn";
-            this.staffBtn.Size = new System.Drawing.Size(185, 45);
-            this.staffBtn.TabIndex = 6;
-            this.staffBtn.Text = "Staff";
-            this.staffBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
-            // 
-            // transBtn
-            // 
-            this.transBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.transBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.transBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.transBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.transBtn.FillColor = System.Drawing.Color.Transparent;
-            this.transBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.transBtn.ForeColor = System.Drawing.Color.White;
-            this.transBtn.Image = ((System.Drawing.Image)(resources.GetObject("transBtn.Image")));
-            this.transBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.transBtn.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.transBtn.ImageSize = new System.Drawing.Size(35, 35);
-            this.transBtn.Location = new System.Drawing.Point(0, 411);
-            this.transBtn.Name = "transBtn";
-            this.transBtn.Size = new System.Drawing.Size(185, 45);
-            this.transBtn.TabIndex = 5;
-            this.transBtn.Text = "Transaction";
-            this.transBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.transBtn.Click += new System.EventHandler(this.transBtn_Click);
-            // 
-            // bloodBnkBtn
-            // 
-            this.bloodBnkBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bloodBnkBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bloodBnkBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bloodBnkBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bloodBnkBtn.FillColor = System.Drawing.Color.Transparent;
-            this.bloodBnkBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.bloodBnkBtn.ForeColor = System.Drawing.Color.White;
-            this.bloodBnkBtn.Image = ((System.Drawing.Image)(resources.GetObject("bloodBnkBtn.Image")));
-            this.bloodBnkBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bloodBnkBtn.ImageOffset = new System.Drawing.Point(-3, 0);
-            this.bloodBnkBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.bloodBnkBtn.Location = new System.Drawing.Point(0, 349);
-            this.bloodBnkBtn.Name = "bloodBnkBtn";
-            this.bloodBnkBtn.Size = new System.Drawing.Size(185, 45);
-            this.bloodBnkBtn.TabIndex = 5;
-            this.bloodBnkBtn.Text = "Blood Bank";
-            this.bloodBnkBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bloodBnkBtn.Click += new System.EventHandler(this.bloodBnkBtn_Click);
-            // 
-            // bloodBtn
-            // 
-            this.bloodBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bloodBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bloodBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bloodBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bloodBtn.FillColor = System.Drawing.Color.Transparent;
-            this.bloodBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.bloodBtn.ForeColor = System.Drawing.Color.White;
-            this.bloodBtn.Image = ((System.Drawing.Image)(resources.GetObject("bloodBtn.Image")));
-            this.bloodBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bloodBtn.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.bloodBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.bloodBtn.Location = new System.Drawing.Point(0, 287);
-            this.bloodBtn.Name = "bloodBtn";
-            this.bloodBtn.Size = new System.Drawing.Size(185, 45);
-            this.bloodBtn.TabIndex = 5;
-            this.bloodBtn.Text = "Blood";
-            this.bloodBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bloodBtn.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // dashBtn
-            // 
-            this.dashBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.dashBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.dashBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.dashBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.dashBtn.FillColor = System.Drawing.Color.Transparent;
-            this.dashBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.dashBtn.ForeColor = System.Drawing.Color.White;
-            this.dashBtn.Image = ((System.Drawing.Image)(resources.GetObject("dashBtn.Image")));
-            this.dashBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dashBtn.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.dashBtn.ImageSize = new System.Drawing.Size(28, 28);
-            this.dashBtn.Location = new System.Drawing.Point(0, 163);
-            this.dashBtn.Name = "dashBtn";
-            this.dashBtn.Size = new System.Drawing.Size(185, 45);
-            this.dashBtn.TabIndex = 3;
-            this.dashBtn.Text = "Dashboard";
-            this.dashBtn.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Panel3.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(188, 122);
+            this.guna2Panel3.TabIndex = 8;
             // 
             // panel1
             // 
@@ -268,29 +102,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1500, 33);
             this.panel1.TabIndex = 1;
-            // 
-            // saaFormControlBox1
-            // 
-            this.saaFormControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.saaFormControlBox1.CloseActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.CloseActive")));
-            this.saaFormControlBox1.CloseInActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.CloseInActive")));
-            this.saaFormControlBox1.CloseTip = "Close";
-            this.saaFormControlBox1.DisableClose = false;
-            this.saaFormControlBox1.DisableMaximize = false;
-            this.saaFormControlBox1.DisableMinimize = false;
-            this.saaFormControlBox1.Location = new System.Drawing.Point(1410, 1);
-            this.saaFormControlBox1.MaximizeActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MaximizeActive")));
-            this.saaFormControlBox1.MaximizeInActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MaximizeInActive")));
-            this.saaFormControlBox1.MaximizeTip = "Maximize";
-            this.saaFormControlBox1.MinimizeActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MinimizeActive")));
-            this.saaFormControlBox1.MinimizeInActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MinimizeInActive")));
-            this.saaFormControlBox1.MinimizeTip = "Minimize";
-            this.saaFormControlBox1.Name = "saaFormControlBox1";
-            this.saaFormControlBox1.ShowClose = true;
-            this.saaFormControlBox1.ShowMaximize = true;
-            this.saaFormControlBox1.ShowMinimize = true;
-            this.saaFormControlBox1.Size = new System.Drawing.Size(90, 30);
-            this.saaFormControlBox1.TabIndex = 4;
             // 
             // guna2Panel2
             // 
@@ -326,6 +137,11 @@
             this.CompanyName.TabIndex = 7;
             this.CompanyName.Text = "Somalia International Blood Bank";
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 8;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // userIcon
             // 
             this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
@@ -338,19 +154,6 @@
             this.userIcon.TabIndex = 7;
             this.userIcon.TabStop = false;
             this.userIcon.Click += new System.EventHandler(this.userIcon_Click);
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 8;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(188, 153);
-            this.guna2Panel3.TabIndex = 8;
             // 
             // donorDashBtn
             // 
@@ -365,13 +168,222 @@
             this.donorDashBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.donorDashBtn.ImageOffset = new System.Drawing.Point(-4, 0);
             this.donorDashBtn.ImageSize = new System.Drawing.Size(33, 33);
-            this.donorDashBtn.Location = new System.Drawing.Point(0, 225);
+            this.donorDashBtn.Location = new System.Drawing.Point(0, 189);
             this.donorDashBtn.Name = "donorDashBtn";
             this.donorDashBtn.Size = new System.Drawing.Size(185, 45);
             this.donorDashBtn.TabIndex = 5;
             this.donorDashBtn.Text = "Donor";
             this.donorDashBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.donorDashBtn.Click += new System.EventHandler(this.donorDashBtn_Click);
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(43, 11);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.guna2CirclePictureBox1.TabIndex = 7;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logOutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logOutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logOutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logOutBtn.FillColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.logOutBtn.ForeColor = System.Drawing.Color.White;
+            this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
+            this.logOutBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.logOutBtn.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.logOutBtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.logOutBtn.Location = new System.Drawing.Point(1, 717);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(188, 45);
+            this.logOutBtn.TabIndex = 6;
+            this.logOutBtn.Text = "Log Out";
+            this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
+            // userBtn
+            // 
+            this.userBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.userBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.userBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.userBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.userBtn.FillColor = System.Drawing.Color.Transparent;
+            this.userBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.userBtn.ForeColor = System.Drawing.Color.White;
+            this.userBtn.Image = ((System.Drawing.Image)(resources.GetObject("userBtn.Image")));
+            this.userBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.userBtn.ImageOffset = new System.Drawing.Point(-6, 0);
+            this.userBtn.ImageSize = new System.Drawing.Size(33, 33);
+            this.userBtn.Location = new System.Drawing.Point(0, 499);
+            this.userBtn.Name = "userBtn";
+            this.userBtn.Size = new System.Drawing.Size(185, 45);
+            this.userBtn.TabIndex = 6;
+            this.userBtn.Text = "Users";
+            this.userBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
+            // 
+            // staffBtn
+            // 
+            this.staffBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.staffBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.staffBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.staffBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.staffBtn.FillColor = System.Drawing.Color.Transparent;
+            this.staffBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.staffBtn.ForeColor = System.Drawing.Color.White;
+            this.staffBtn.Image = ((System.Drawing.Image)(resources.GetObject("staffBtn.Image")));
+            this.staffBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.staffBtn.ImageOffset = new System.Drawing.Point(-6, 0);
+            this.staffBtn.ImageSize = new System.Drawing.Size(33, 33);
+            this.staffBtn.Location = new System.Drawing.Point(0, 437);
+            this.staffBtn.Name = "staffBtn";
+            this.staffBtn.Size = new System.Drawing.Size(185, 45);
+            this.staffBtn.TabIndex = 6;
+            this.staffBtn.Text = "Staff";
+            this.staffBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
+            // 
+            // transBtn
+            // 
+            this.transBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.transBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.transBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.transBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.transBtn.FillColor = System.Drawing.Color.Transparent;
+            this.transBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.transBtn.ForeColor = System.Drawing.Color.White;
+            this.transBtn.Image = ((System.Drawing.Image)(resources.GetObject("transBtn.Image")));
+            this.transBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.transBtn.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.transBtn.ImageSize = new System.Drawing.Size(35, 35);
+            this.transBtn.Location = new System.Drawing.Point(0, 375);
+            this.transBtn.Name = "transBtn";
+            this.transBtn.Size = new System.Drawing.Size(185, 45);
+            this.transBtn.TabIndex = 5;
+            this.transBtn.Text = "Transaction";
+            this.transBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.transBtn.Click += new System.EventHandler(this.transBtn_Click);
+            // 
+            // bloodBnkBtn
+            // 
+            this.bloodBnkBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bloodBnkBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bloodBnkBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bloodBnkBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bloodBnkBtn.FillColor = System.Drawing.Color.Transparent;
+            this.bloodBnkBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.bloodBnkBtn.ForeColor = System.Drawing.Color.White;
+            this.bloodBnkBtn.Image = ((System.Drawing.Image)(resources.GetObject("bloodBnkBtn.Image")));
+            this.bloodBnkBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bloodBnkBtn.ImageOffset = new System.Drawing.Point(-3, 0);
+            this.bloodBnkBtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.bloodBnkBtn.Location = new System.Drawing.Point(0, 313);
+            this.bloodBnkBtn.Name = "bloodBnkBtn";
+            this.bloodBnkBtn.Size = new System.Drawing.Size(185, 45);
+            this.bloodBnkBtn.TabIndex = 5;
+            this.bloodBnkBtn.Text = "Blood Bank";
+            this.bloodBnkBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bloodBnkBtn.Click += new System.EventHandler(this.bloodBnkBtn_Click);
+            // 
+            // bloodBtn
+            // 
+            this.bloodBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bloodBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bloodBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bloodBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bloodBtn.FillColor = System.Drawing.Color.Transparent;
+            this.bloodBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.bloodBtn.ForeColor = System.Drawing.Color.White;
+            this.bloodBtn.Image = ((System.Drawing.Image)(resources.GetObject("bloodBtn.Image")));
+            this.bloodBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bloodBtn.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.bloodBtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.bloodBtn.Location = new System.Drawing.Point(0, 251);
+            this.bloodBtn.Name = "bloodBtn";
+            this.bloodBtn.Size = new System.Drawing.Size(185, 45);
+            this.bloodBtn.TabIndex = 5;
+            this.bloodBtn.Text = "Blood";
+            this.bloodBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bloodBtn.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // dashBtn
+            // 
+            this.dashBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.dashBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.dashBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.dashBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.dashBtn.FillColor = System.Drawing.Color.Transparent;
+            this.dashBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.dashBtn.ForeColor = System.Drawing.Color.White;
+            this.dashBtn.Image = ((System.Drawing.Image)(resources.GetObject("dashBtn.Image")));
+            this.dashBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dashBtn.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.dashBtn.ImageSize = new System.Drawing.Size(28, 28);
+            this.dashBtn.Location = new System.Drawing.Point(0, 127);
+            this.dashBtn.Name = "dashBtn";
+            this.dashBtn.Size = new System.Drawing.Size(185, 45);
+            this.dashBtn.TabIndex = 3;
+            this.dashBtn.Text = "Dashboard";
+            this.dashBtn.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // saaFormControlBox1
+            // 
+            this.saaFormControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.saaFormControlBox1.CloseActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.CloseActive")));
+            this.saaFormControlBox1.CloseInActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.CloseInActive")));
+            this.saaFormControlBox1.CloseTip = "Close";
+            this.saaFormControlBox1.DisableClose = false;
+            this.saaFormControlBox1.DisableMaximize = false;
+            this.saaFormControlBox1.DisableMinimize = false;
+            this.saaFormControlBox1.Location = new System.Drawing.Point(1410, 1);
+            this.saaFormControlBox1.MaximizeActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MaximizeActive")));
+            this.saaFormControlBox1.MaximizeInActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MaximizeInActive")));
+            this.saaFormControlBox1.MaximizeTip = "Maximize";
+            this.saaFormControlBox1.MinimizeActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MinimizeActive")));
+            this.saaFormControlBox1.MinimizeInActive = ((System.Drawing.Image)(resources.GetObject("saaFormControlBox1.MinimizeInActive")));
+            this.saaFormControlBox1.MinimizeTip = "Minimize";
+            this.saaFormControlBox1.Name = "saaFormControlBox1";
+            this.saaFormControlBox1.ShowClose = true;
+            this.saaFormControlBox1.ShowMaximize = true;
+            this.saaFormControlBox1.ShowMinimize = true;
+            this.saaFormControlBox1.Size = new System.Drawing.Size(90, 30);
+            this.saaFormControlBox1.TabIndex = 4;
+            // 
+            // reportsBtn
+            // 
+            this.reportsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.reportsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.reportsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.reportsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.reportsBtn.FillColor = System.Drawing.Color.Transparent;
+            this.reportsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.reportsBtn.ForeColor = System.Drawing.Color.White;
+            this.reportsBtn.Image = ((System.Drawing.Image)(resources.GetObject("reportsBtn.Image")));
+            this.reportsBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.reportsBtn.ImageOffset = new System.Drawing.Point(-6, 0);
+            this.reportsBtn.ImageSize = new System.Drawing.Size(33, 33);
+            this.reportsBtn.Location = new System.Drawing.Point(0, 553);
+            this.reportsBtn.Name = "reportsBtn";
+            this.reportsBtn.Size = new System.Drawing.Size(185, 45);
+            this.reportsBtn.TabIndex = 6;
+            this.reportsBtn.Text = "Reports";
+            this.reportsBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.reportsBtn.Click += new System.EventHandler(this.reportsBtn_Click);
+            // 
+            // reports1
+            // 
+            this.reports1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reports1.Location = new System.Drawing.Point(188, 76);
+            this.reports1.Name = "reports1";
+            this.reports1.Size = new System.Drawing.Size(1312, 724);
+            this.reports1.TabIndex = 10;
+            this.reports1.Visible = false;
             // 
             // userBoard1
             // 
@@ -458,6 +470,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1500, 800);
+            this.Controls.Add(this.reports1);
             this.Controls.Add(this.userBoard1);
             this.Controls.Add(this.dashBoard1);
             this.Controls.Add(this.staffBoard1);
@@ -474,11 +487,12 @@
             this.Text = "Dash";
             this.Load += new System.EventHandler(this.Dash_Load);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -502,7 +516,6 @@
         private View.DashBoard dashBoard1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button logOutBtn;
-        private Guna.UI2.WinForms.Guna2Button settingBtn;
         private System.Windows.Forms.Label CompanyName;
         private Guna.UI2.WinForms.Guna2Button userBtn;
         private View.UserBoard userBoard1;
@@ -511,6 +524,8 @@
         private System.Windows.Forms.Label txtFullName;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button donorDashBtn;
+        private Guna.UI2.WinForms.Guna2Button reportsBtn;
+        private View.Reports reports1;
     }
 }
 

@@ -46,22 +46,25 @@ namespace Blood_Bank.View
             }
             else
             {
-                var trn = new Trans(bId, quantity, bloodGroup, type, txtHospital.Text, txtStaffName.Text);
-                trn.addToTr();
-                if (trn.QueryHasError)
-                    Overall.Messages.ShowMessage(trn.ErrorMessage, "Error", "error");
+                if (!InputValidations.isValueDigit(txtHospital.Text, txtStaffName.Text))
+                    MessageBox.Show("All fields must be digit");
                 else
                 {
-                    MessageBox.Show($"Succesfully transfared {quantity} to {txtHospital.Text}");
-                    var newData = Main.ReadData<string>("readFromBbank");
-                    //BbankBoard.BankDtaView.DataSource = newData;
-                    //BbankBoard.BankDtaView.Refresh();
-                    Transaction.transView.DataSource = Main.ReadData<string>("readTrans");
-                    //Shared.Dash.getBankRef().fromBloodGroup();
-                    Shared.fromBloodGroup();
-                    //var bBnk = new BbankBoard();
-                    //bBnk.fromBloodGroup();
-                    this.Close();
+                    var trn = new Trans(bId, quantity, bloodGroup, type, txtHospital.Text, txtStaffName.Text);
+                    trn.addToTr();
+                    if (trn.QueryHasError)
+                        Overall.Messages.ShowMessage(trn.ErrorMessage, "Error", "error");
+                    else
+                    {
+                        MessageBox.Show($"Succesfully transfared {quantity} to {txtHospital.Text}");
+                        var newData = Main.ReadData<string>("readFromBbank");
+                        BbankBoard.BankDtaView.DataSource = newData;
+                        BbankBoard.BankDtaView.Refresh();
+                        Transaction.transView.DataSource = Main.ReadData<string>("readTrans");
+                        //Shared.Dash.getBankRef().fromBloodGroup();
+                        Shared.fromBloodGroup();
+                        this.Close();
+                    }
                 }
             }
         }

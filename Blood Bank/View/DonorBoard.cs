@@ -85,50 +85,58 @@ namespace Blood_Bank.View
         {
             DateTime dataTime = DateTime.Now;
             string fullName = firstNameTxt.Text + " " + lastNameTxt.Text;
-            //int age = (int)Convert.ToInt16(ageTxt.Text);
+            //int age = Convert.ToInt16(ageTxt.Text);
 
-            //if (InputValidations.isDonorValid(firstNameTxt.Text, lastNameTxt.Text, bloodGroupCombo.Text, addressTxt.Text, genderCombo.Text, dataTime))
-            //{
-            //    MessageBox.Show("Fill all the required fields");
-            //}
-            //else
-            //{
-            if (!InputValidations.phoneAgeVal(phoneNumTxt.Text, ageTxt.Text))
+            if (InputValidations.isDonorValid(firstNameTxt.Text, lastNameTxt.Text, bloodGroupCombo.Text, addressTxt.Text, genderCombo.Text, dataTime))
             {
-                MessageBox.Show("Invalid format of phone number or age");
+                MessageBox.Show("Fill all the required fields");
             }
             else
             {
-                if (!InputValidations.isQuantityValid(quantityTxt.Text))
+                if (!InputValidations.phoneAgeVal(phoneNumTxt.Text, ageTxt.Text))
                 {
-                    MessageBox.Show("Invalid Quantity");
+                    MessageBox.Show("Invalid format of phone number or age");
                 }
                 else
                 {
-                    
-                    
-                    if (!InputValidations.isNumValid(phoneNumTxt.Text))
+                    if (!InputValidations.isQuantityValid(quantityTxt.Text))
                     {
-                        MessageBox.Show("Phone Number is too short");
+                        MessageBox.Show("Invalid Quantity");
                     }
                     else
                     {
-                        Int64 phoneNum = Convert.ToInt64(phoneNumTxt.Text);
-                        var donor = new Donor(fullName, bloodGroupCombo.Text, phoneNum, addressTxt.Text, genderCombo.Text, dataTime, Convert.ToInt32(quantityTxt.Text), Convert.ToInt16(ageTxt.Text));
-                        donor.RegisterDonor();
-                        if (donor.QueryHasError)
-                            Messages.ShowMessage(donor.ErrorMessage, "Error", "error");
+
+
+                        if (!InputValidations.isNumValid(phoneNumTxt.Text))
+                        {
+                            MessageBox.Show("Phone Number is too short");
+                        }
                         else
                         {
-                            MessageBox.Show($"Successfully registered a donor with name of {fullName}");
-                            viewDnrDta.DataSource = Overall.Main.ReadData<string>("readDonor");
-                            BloodBoard.viewDta.DataSource = Overall.Main.ReadData<string>("readFromBlood");
-                            clearTxt();
+                            if (!InputValidations.isValueDigit(firstNameTxt.Text, lastNameTxt.Text, addressTxt.Text))
+                            {
+                                MessageBox.Show("Invalid Character Input");
+                            }
+                            else
+                            {
+                                Int64 phoneNum = Convert.ToInt64(phoneNumTxt.Text);
+                                var donor = new Donor(fullName, bloodGroupCombo.Text, phoneNum, addressTxt.Text, genderCombo.Text, dataTime, Convert.ToInt32(quantityTxt.Text), Convert.ToInt16(ageTxt.Text));
+                                donor.RegisterDonor();
+                                if (donor.QueryHasError)
+                                    Messages.ShowMessage(donor.ErrorMessage, "Error", "error");
+                                else
+                                {
+                                    MessageBox.Show($"Successfully registered a donor with name of {fullName}");
+                                    viewDnrDta.DataSource = Overall.Main.ReadData<string>("readDonor");
+                                    BloodBoard.viewDta.DataSource = Overall.Main.ReadData<string>("readFromBlood");
+                                    clearTxt();
+                                }
+                            }
                         }
                     }
                 }
+
             }
-                
         }
 
         private void phoneNumTxt_TextChanged(object sender, EventArgs e)

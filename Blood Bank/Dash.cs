@@ -37,6 +37,7 @@ namespace Blood_Bank
             transaction1.Visible = false;
             staffBoard1.Visible = false;
             dashBoard1.Visible = false;
+            reports1.Visible = false;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace Blood_Bank
             staffBoard1.Visible = false;
             dashBoard1.Visible = false;
             userBoard1.Visible = false;
-
+            reports1.Visible = false;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -60,6 +61,7 @@ namespace Blood_Bank
             transaction1.Visible = false;
             staffBoard1.Visible = false;
             userBoard1.Visible = false;
+            reports1.Visible = false;
         }
         public BbankBoard getBankRef()
         {
@@ -74,6 +76,7 @@ namespace Blood_Bank
             transaction1.Visible = false;
             dashBoard1.Visible = false;
             userBoard1.Visible = false;
+            reports1.Visible = false;
             //if (!didWeRead)
             //{
             //    bbankBoard1.BankDtaView.DataSource = Main.ReadData<string>("readFromBbank");
@@ -93,6 +96,7 @@ namespace Blood_Bank
             staffBoard1.Visible = false;
             dashBoard1.Visible = false;
             userBoard1.Visible = false;
+            reports1.Visible = false;
         }
 
         private void staffBtn_Click(object sender, EventArgs e)
@@ -104,6 +108,7 @@ namespace Blood_Bank
             staffBoard1.Visible = true;
             dashBoard1.Visible = false;
             userBoard1.Visible = false;
+            reports1.Visible = false;
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
@@ -125,6 +130,7 @@ namespace Blood_Bank
             staffBoard1.Visible = false;
             dashBoard1.Visible = false;
             userBoard1.Visible = true;
+            reports1.Visible = false;
         }
 
         private void Dash_Load(object sender, EventArgs e)
@@ -163,5 +169,16 @@ namespace Blood_Bank
             donorBoard2.Visible = true;
         }
 
+        private void reportsBtn_Click(object sender, EventArgs e)
+        {
+            transaction1.Visible = false;
+            donorBoard2.Visible = false;
+            bloodBoard2.Visible = false;
+            bbankBoard1.Visible = false;
+            staffBoard1.Visible = false;
+            dashBoard1.Visible = false;
+            userBoard1.Visible = false;
+            reports1.Visible = true;
+        }
     }
 }

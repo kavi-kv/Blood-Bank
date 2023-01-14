@@ -43,9 +43,14 @@ namespace Blood_Bank.View
         {
             if (bloodDtaView.SelectedRows.Count > 0)
             {
-                Alert al = new Alert($"Do you want to add the donation with the id {bloodId} to the Blood Bank", "Add");
-                al.ShowDialog();
-                 if (al.IsYes != null && !al.IsYes.Value) return;
+                //Alert al = new Alert($"Do you want to add the donation with the id {bloodId} to the Blood Bank", "Add");
+                //al.ShowDialog();
+                // if (al.IsYes != null && !al.IsYes.Value) return;
+                DialogResult dialogResult = MessageBox.Show($"Do you want to add the donation with the id {bloodId} to the Blood Bank", "Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.No)
+                    return;
+                else
+                {
                     var blood = new Blood(bloodId, quantity, bloodGroup);
                     blood.AddtoBBank();
                     if (blood.QueryHasError)
@@ -53,12 +58,12 @@ namespace Blood_Bank.View
                     else
                     {
                         MessageBox.Show("Successfully Confirmed");
-                        var newData = Main.ReadData<string>("readFromBbank");
-                    BbankBoard.BankDtaView.DataSource = newData;
-                    BbankBoard.BankDtaView.Refresh();
-                    bloodDtaView.DataSource = Main.ReadData<string>("readFromBlood");
-                       Shared.fromBloodGroup();
+                        bloodDtaView.DataSource = Main.ReadData<string>("readFromBlood");
+                        BbankBoard.BankDtaView.Refresh();
+                        BbankBoard.BankDtaView.DataSource = Main.ReadData<string>("readFromBbank");
+                        Shared.fromBloodGroup();
                     }
+                }
             }
 
         }

@@ -48,6 +48,68 @@ namespace Blood_Bank.Overall
             return (int)Convert.ToInt64(result);
         }
 
+        public static DataTable ReadDonor(string currProc,int phoneNum)
+        {
+            DataTable dt = new DataTable();
+            var conn = new Main().GetSqlConnection();
+            conn.Open();
+            var cmd = new SqlCommand(currProc.ToString(), conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@phoneNum", phoneNum);
+            var adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            cmd.ExecuteNonQuery();
+            return dt;
+        }
+        public static DataTable ReadTrans(string currProc,int trId)
+        {
+            DataTable dt = new DataTable();
+            var conn = new Main().GetSqlConnection();
+            conn.Open();
+            var cmd = new SqlCommand(currProc.ToString(), conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@trId", trId);
+            var adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            cmd.ExecuteNonQuery();
+            return dt;
+        }
+        public static bool isNumberValid(int number)
+        {
+            var conn = new Main().GetSqlConnection();
+            conn.Open();
+            var cmd = new SqlCommand("sigleDonorReport", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@phoneNum", number);
+            var reader = cmd.ExecuteReader();
+            int phone = 0;
+            int num = Reports.phoneNum;
+            while (reader.Read())
+            {
+                phone = Convert.ToInt32(reader[3]);
+                if (num == phone)
+                    return true;
+            }
+            return false;
+        }
+        public static bool isTrIdValid(int id)
+        {
+            var conn = new Main().GetSqlConnection();
+            conn.Open();
+            var cmd = new SqlCommand("readSingleTrans", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@trId", id);
+            var reader = cmd.ExecuteReader();
+            int TransId = 0;
+            int trId = Reports.transacionId;
+            while (reader.Read())
+            {
+                TransId = Convert.ToInt32(reader[0]);
+                if (trId == TransId)
+                    return true;
+            }
+            return false;
+        }
         public static DataTable getDataByMonth<T>(T month,T procedure)
         {
             DataTable dt = new DataTable();

@@ -77,6 +77,7 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "quantity";
+            this.txtQuantity.ReadOnly = true;
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.Size = new System.Drawing.Size(287, 41);
             this.txtQuantity.TabIndex = 1;
