@@ -17,11 +17,10 @@ namespace Blood_Bank.View
         public int bId { get; set; }
         public double quantity { get; set; }
         public string bloodGroup { get; set; }
-        public static Guna.UI2.WinForms.Guna2DataGridView BankDtaView { get; set; }
         public BbankBoard()
         {
             InitializeComponent();
-            BankDtaView = bBankDtaView;
+            Shared.BankDtaView = bBankDtaView;
         }
        
         //public void getblood()
@@ -64,7 +63,7 @@ namespace Blood_Bank.View
             AddToTrans add = new AddToTrans(bId,  quantity,  bloodGroup);
             add.Owner = this.FindForm();
             add.ShowDialog();
-            BbankBoard.BankDtaView.DataSource = Main.ReadData<string>("readFromBbank");
+            Shared.BankDtaView.DataSource = Main.ReadData<string>("readFromBbank");
         }
 
         private void bBankDtaView_CellContentClick(object sender, DataGridViewCellEventArgs e)

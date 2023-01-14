@@ -38,7 +38,7 @@ namespace Blood_Bank.View
         {
             phoneNum = Convert.ToInt32(txtSearchBar.Text.ToString());
             this.reportViewer1.LocalReport.DataSources.Clear();
-            var data = Overall.Main.ReadDonor("ReadDonor", phoneNum);
+            var data = Overall.Main.ReadDonor("sigleDonorReport", phoneNum);
             var reportResource = new ReportDataSource("SingleDonor", data);
             reportViewer1.LocalReport.ReportPath = "SingleDonerReport.rdlc";
             reportViewer1.LocalReport.DataSources.Add(reportResource);

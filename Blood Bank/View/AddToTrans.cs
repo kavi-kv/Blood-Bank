@@ -58,8 +58,8 @@ namespace Blood_Bank.View
                     {
                         MessageBox.Show($"Succesfully transfared {quantity} to {txtHospital.Text}");
                         var newData = Main.ReadData<string>("readFromBbank");
-                        BbankBoard.BankDtaView.DataSource = newData;
-                        BbankBoard.BankDtaView.Refresh();
+                        Shared.BankDtaView.DataSource = newData;
+                        Shared.BankDtaView.Refresh();
                         Transaction.transView.DataSource = Main.ReadData<string>("readTrans");
                         //Shared.Dash.getBankRef().fromBloodGroup();
                         Shared.fromBloodGroup();

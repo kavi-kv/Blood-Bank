@@ -14,7 +14,7 @@ namespace Blood_Bank.View
 {
     public partial class BloodBoard : UserControl
     {
-        public static Guna.UI2.WinForms.Guna2DataGridView viewDta { get; set; } = new Guna.UI2.WinForms.Guna2DataGridView();
+      
         private string bloodGroup { get; set; }
         private int bloodId { get; set; }
         private double quantity { get; set; }
@@ -22,7 +22,7 @@ namespace Blood_Bank.View
         public BloodBoard()
         {
             InitializeComponent();
-            viewDta = bloodDtaView;
+            Shared.viewDta = bloodDtaView;
         }
 
         private void BloodBoard_Load(object sender, EventArgs e)
@@ -59,8 +59,9 @@ namespace Blood_Bank.View
                     {
                         MessageBox.Show("Successfully Confirmed");
                         bloodDtaView.DataSource = Main.ReadData<string>("readFromBlood");
-                        BbankBoard.BankDtaView.Refresh();
-                        BbankBoard.BankDtaView.DataSource = Main.ReadData<string>("readFromBbank");
+                        // Shared.BankDtaView.Refresh();
+                        Shared.BankDtaView.DataSource = null;
+                        Shared.BankDtaView.DataSource = Main.ReadData<string>("readFromBbank");
                         Shared.fromBloodGroup();
                     }
                 }

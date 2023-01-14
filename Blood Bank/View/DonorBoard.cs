@@ -128,7 +128,8 @@ namespace Blood_Bank.View
                                 {
                                     MessageBox.Show($"Successfully registered a donor with name of {fullName}");
                                     viewDnrDta.DataSource = Overall.Main.ReadData<string>("readDonor");
-                                    BloodBoard.viewDta.DataSource = Overall.Main.ReadData<string>("readFromBlood");
+                                    //Shared.viewDta.DataSource = Overall.Main.ReadData<string>("readFromBlood");
+                                    Shared.Dash.ReUpdate();
                                     clearTxt();
                                 }
                             }

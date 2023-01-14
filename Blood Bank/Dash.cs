@@ -15,20 +15,23 @@ namespace Blood_Bank
 {
     public partial class Dash : Form
     {
-        public static int userId { get; set; }
-        public static string fullName { get; set; }
-        public static string userName { get; set; }
-        public static string Email { get; set; }
-        public static string Address { get; set; }
-        public static string secQ { get; set; }
-        public static string secAns { get; set; }
+        public  int userId { get; set; }
+        public  string fullName { get; set; }
+        public  string userName { get; set; }
+        public  string Email { get; set; }
+        public  string Address { get; set; }
+        public  string secQ { get; set; }
+        public  string secAns { get; set; }
         public Dash()
         {
             InitializeComponent();
-            Shared.Dash = this;
-            Shared.fromBloodGroup = bbankBoard1.fromBloodGroup;
+          //  Shared.Dash = this;
+          //  Shared.fromBloodGroup = bbankBoard1.fromBloodGroup;
         }
-
+        public void fromBloodGroup()
+        {
+            bbankBoard1.fromBloodGroup();
+        }
         private void donorDashBtn_Click(object sender, EventArgs e)
         {
             donorBoard2.Visible = true;
@@ -86,7 +89,10 @@ namespace Blood_Bank
             //BbankBoard.BankDtaView.DataSource = newData;
             //BbankBoard.BankDtaView.Refresh();
         }
-
+        public void ReUpdate()
+        {
+            Shared.viewDta.DataSource = Overall.Main.ReadData<string>("readFromBlood");
+        }
         private void transBtn_Click(object sender, EventArgs e)
         {
             transaction1.Show();
@@ -141,6 +147,7 @@ namespace Blood_Bank
             txtFullName.Text = fullName;
             if (!Main.isAdmin(userName))
                 brefilage();
+           
         }
 
         private void userIcon_Click(object sender, EventArgs e)
@@ -150,9 +157,9 @@ namespace Blood_Bank
 
         void showUserView()
         {
-            Dash dash = new Dash();
+            
             UserViewBoard viewBoard = new UserViewBoard();
-            dash.Opacity = 0.5;
+            
             viewBoard.ShowDialog();
            
         }
@@ -165,6 +172,7 @@ namespace Blood_Bank
             bloodBtn.Location = new Point(-3, 225);
             bloodBnkBtn.Location = new Point(0, 287);
             transBtn.Location = new Point(0, 349);
+            reportsBtn.Location = new Point(0, 411);
             dashBoard1.Visible = false;
             donorBoard2.Visible = true;
         }

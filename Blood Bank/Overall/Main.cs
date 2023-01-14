@@ -305,7 +305,7 @@ namespace Blood_Bank.Overall
 
         public static void loggedIn(string userName)
         {
-            var dash = new Dash();
+           // var dash = new Dash();
             var conn = new Main().GetSqlConnection();
             conn.Open();
             var cmd = new SqlCommand("loggedIn", conn);
@@ -314,12 +314,12 @@ namespace Blood_Bank.Overall
             var reader = cmd.ExecuteReader();
             while(reader.Read())
             {
-                Dash.userId = (int) reader["id"];
-                Dash.fullName = reader["fullName"].ToString();
-                Dash.userName = reader["userName"].ToString();
-                Dash.Email = reader["Email"].ToString();
-                Dash.secQ = reader["securityQuestion"].ToString();
-                Dash.secAns = reader["securityAnswer"].ToString(); 
+              Shared.Dash.userId = (int) reader["id"];
+              Shared.Dash.fullName = reader["fullName"].ToString();
+              Shared.Dash.userName = reader["userName"].ToString();
+              Shared.Dash.Email = reader["Email"].ToString();
+              Shared.Dash.secQ = reader["securityQuestion"].ToString();
+              Shared.Dash.secAns = reader["securityAnswer"].ToString(); 
             }
             reader.Close();
             conn.Close();

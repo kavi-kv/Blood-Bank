@@ -29,12 +29,12 @@ namespace Blood_Bank.View
         private void UserViewBoard_Load(object sender, EventArgs e)
         {
             updateBtn.Enabled = false;
-            txtFullName.Text = Dash.fullName;
-            txtEmail.Text = Dash.Email;
-            txtUserName.Text = Dash.userName;
-            txtSecQuestion.Text = Dash.secQ;
-            txtSecAns.Text = Dash.secAns;
-            idUpdater = Dash.userId;
+            txtFullName.Text = Shared.Dash.fullName;
+            txtEmail.Text = Shared.Dash.Email;
+            txtUserName.Text = Shared.Dash.userName;
+            txtSecQuestion.Text = Shared.Dash.secQ;
+            txtSecAns.Text = Shared.Dash.secAns;
+            idUpdater = Shared.Dash.userId;
             
         }
 

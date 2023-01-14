@@ -11,5 +11,7 @@ namespace Blood_Bank
     {
         public static Dash  Dash { get; set; }
         public static Action fromBloodGroup { get; set;}
+        public static Guna.UI2.WinForms.Guna2DataGridView viewDta { get; set; }
+        public static Guna.UI2.WinForms.Guna2DataGridView BankDtaView { get; set; }
     }
 }

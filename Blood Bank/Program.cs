@@ -21,7 +21,13 @@ namespace Blood_Bank
             var login = new Login();
             login.ShowDialog();
             if (login.Issucced)
-                Application.Run(new Dash());
+            {
+
+                var dash = new Dash();
+                Shared.Dash = dash;
+                Shared.fromBloodGroup = dash.fromBloodGroup;
+                Application.Run(dash);
+            }
             else
                 Application.Exit();
         }
