@@ -31,7 +31,7 @@ namespace Blood_Bank.Controller
             this.userName = userName;
             this.password = password;
         }
-        public Users(string fullName, string email, string role,string userName,string password ,string secQuestion, string secANswer)
+        public Users(string fullName, string email, string role,string userName,string password ,string secQuestion, string secAnswer)
         {
             this.fullName = fullName;
             this.email = email;
@@ -51,6 +51,32 @@ namespace Blood_Bank.Controller
             this.idUpdater = idUpdater;
         }
         public void addUserAsAdmin()
+        {
+            try
+            {
+                var user = new Users();
+                var conn = user.GetSqlConnection();
+                conn.Open();
+                var cmd = new SqlCommand("addUser", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@fullName", fullName);
+                cmd.Parameters.AddWithValue("@userName", userName);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@role",role);
+                cmd.Parameters.AddWithValue("@password",password);
+                cmd.Parameters.AddWithValue("@secQ",secQuestion);
+                cmd.Parameters.AddWithValue("@secA", secAnswer);
+                cmd.ExecuteNonQuery();
+                QueryHasError = false;
+                conn.Close();
+            }
+            catch(SqlException ex)
+            {
+                QueryHasError = true;
+                ErrorMessage = ex.Message;
+            }
+        }
+        public void addUser()
         {
             try
             {

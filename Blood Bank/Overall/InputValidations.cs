@@ -104,6 +104,17 @@ namespace Blood_Bank.Overall
             return true;
         }
 
+        //?: Overload 4
+        public static bool isValueDigit(string fName, string userName, string email,string secAns)
+        {
+            if ((fName.All(char.IsDigit)) || userName.All(char.IsDigit) || email.All(char.IsDigit))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public static bool isGenderCmBxSelected(Guna.UI2.WinForms.Guna2ComboBox gender)
         {
             if (gender.SelectedIndex == -1)

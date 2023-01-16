@@ -110,7 +110,8 @@ namespace Blood_Bank.View
         {
             ForgetPass fgp = new ForgetPass();
             this.Hide();
-            fgp.Show();
+            fgp.ShowDialog();
+            
         }
     }
 }

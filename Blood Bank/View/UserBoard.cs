@@ -40,5 +40,11 @@ namespace Blood_Bank.View
                 userDtaView.DataSource = Overall.Main.ReadData<string>("readUsers");
             }
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            var addUser = new AddUser();
+            addUser.ShowDialog();
+        }
     }
 }

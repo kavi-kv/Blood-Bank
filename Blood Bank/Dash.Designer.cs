@@ -31,24 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dash));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtFullName = new System.Windows.Forms.Label();
-            this.CompanyName = new System.Windows.Forms.Label();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.userIcon = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.donorDashBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.logOutBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.reportsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userBtn = new Guna.UI2.WinForms.Guna2Button();
             this.staffBtn = new Guna.UI2.WinForms.Guna2Button();
             this.transBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bloodBnkBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bloodBtn = new Guna.UI2.WinForms.Guna2Button();
             this.dashBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.saaFormControlBox1 = new SaaUI.SaaFormControlBox();
-            this.reportsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtFullName = new System.Windows.Forms.Label();
+            this.CompanyName = new System.Windows.Forms.Label();
+            this.userIcon = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.reports1 = new Blood_Bank.View.Reports();
             this.userBoard1 = new Blood_Bank.View.UserBoard();
             this.dashBoard1 = new Blood_Bank.View.DashBoard();
@@ -59,10 +59,10 @@
             this.bloodBoard2 = new Blood_Bank.View.BloodBoard();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -83,77 +83,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(188, 767);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(188, 122);
-            this.guna2Panel3.TabIndex = 8;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.panel1.Controls.Add(this.saaFormControlBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1500, 33);
-            this.panel1.TabIndex = 1;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(28)))), ((int)(((byte)(78)))));
-            this.guna2Panel2.Controls.Add(this.txtFullName);
-            this.guna2Panel2.Controls.Add(this.CompanyName);
-            this.guna2Panel2.Controls.Add(this.userIcon);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(188, 33);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1312, 43);
-            this.guna2Panel2.TabIndex = 2;
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.AutoSize = true;
-            this.txtFullName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullName.ForeColor = System.Drawing.Color.White;
-            this.txtFullName.Location = new System.Drawing.Point(60, 11);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(53, 21);
-            this.txtFullName.TabIndex = 8;
-            this.txtFullName.Text = "Name";
-            // 
-            // CompanyName
-            // 
-            this.CompanyName.AutoSize = true;
-            this.CompanyName.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompanyName.ForeColor = System.Drawing.Color.White;
-            this.CompanyName.Location = new System.Drawing.Point(490, 6);
-            this.CompanyName.Name = "CompanyName";
-            this.CompanyName.Size = new System.Drawing.Size(332, 30);
-            this.CompanyName.TabIndex = 7;
-            this.CompanyName.Text = "Somalia International Blood Bank";
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 8;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // userIcon
-            // 
-            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
-            this.userIcon.ImageRotate = 0F;
-            this.userIcon.Location = new System.Drawing.Point(18, 7);
-            this.userIcon.Name = "userIcon";
-            this.userIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userIcon.Size = new System.Drawing.Size(30, 30);
-            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userIcon.TabIndex = 7;
-            this.userIcon.TabStop = false;
-            this.userIcon.Click += new System.EventHandler(this.userIcon_Click);
             // 
             // donorDashBtn
             // 
@@ -176,16 +105,6 @@
             this.donorDashBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.donorDashBtn.Click += new System.EventHandler(this.donorDashBtn_Click);
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(43, 11);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(90, 90);
-            this.guna2CirclePictureBox1.TabIndex = 7;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // logOutBtn
             // 
             this.logOutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -206,6 +125,27 @@
             this.logOutBtn.Text = "Log Out";
             this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
+            // reportsBtn
+            // 
+            this.reportsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.reportsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.reportsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.reportsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.reportsBtn.FillColor = System.Drawing.Color.Transparent;
+            this.reportsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.reportsBtn.ForeColor = System.Drawing.Color.White;
+            this.reportsBtn.Image = ((System.Drawing.Image)(resources.GetObject("reportsBtn.Image")));
+            this.reportsBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.reportsBtn.ImageOffset = new System.Drawing.Point(-6, 0);
+            this.reportsBtn.ImageSize = new System.Drawing.Size(33, 33);
+            this.reportsBtn.Location = new System.Drawing.Point(0, 553);
+            this.reportsBtn.Name = "reportsBtn";
+            this.reportsBtn.Size = new System.Drawing.Size(185, 45);
+            this.reportsBtn.TabIndex = 6;
+            this.reportsBtn.Text = "Reports";
+            this.reportsBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.reportsBtn.Click += new System.EventHandler(this.reportsBtn_Click);
             // 
             // userBtn
             // 
@@ -332,6 +272,37 @@
             this.dashBtn.Text = "Dashboard";
             this.dashBtn.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(188, 122);
+            this.guna2Panel3.TabIndex = 8;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(42, 11);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(105, 105);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 7;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.panel1.Controls.Add(this.saaFormControlBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1500, 33);
+            this.panel1.TabIndex = 1;
+            // 
             // saaFormControlBox1
             // 
             this.saaFormControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -355,26 +326,57 @@
             this.saaFormControlBox1.Size = new System.Drawing.Size(90, 30);
             this.saaFormControlBox1.TabIndex = 4;
             // 
-            // reportsBtn
+            // guna2Panel2
             // 
-            this.reportsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.reportsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.reportsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.reportsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.reportsBtn.FillColor = System.Drawing.Color.Transparent;
-            this.reportsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.reportsBtn.ForeColor = System.Drawing.Color.White;
-            this.reportsBtn.Image = ((System.Drawing.Image)(resources.GetObject("reportsBtn.Image")));
-            this.reportsBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.reportsBtn.ImageOffset = new System.Drawing.Point(-6, 0);
-            this.reportsBtn.ImageSize = new System.Drawing.Size(33, 33);
-            this.reportsBtn.Location = new System.Drawing.Point(0, 553);
-            this.reportsBtn.Name = "reportsBtn";
-            this.reportsBtn.Size = new System.Drawing.Size(185, 45);
-            this.reportsBtn.TabIndex = 6;
-            this.reportsBtn.Text = "Reports";
-            this.reportsBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.reportsBtn.Click += new System.EventHandler(this.reportsBtn_Click);
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(28)))), ((int)(((byte)(78)))));
+            this.guna2Panel2.Controls.Add(this.txtFullName);
+            this.guna2Panel2.Controls.Add(this.CompanyName);
+            this.guna2Panel2.Controls.Add(this.userIcon);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(188, 33);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1312, 43);
+            this.guna2Panel2.TabIndex = 2;
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.AutoSize = true;
+            this.txtFullName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.ForeColor = System.Drawing.Color.White;
+            this.txtFullName.Location = new System.Drawing.Point(60, 11);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(53, 21);
+            this.txtFullName.TabIndex = 8;
+            this.txtFullName.Text = "Name";
+            // 
+            // CompanyName
+            // 
+            this.CompanyName.AutoSize = true;
+            this.CompanyName.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompanyName.ForeColor = System.Drawing.Color.White;
+            this.CompanyName.Location = new System.Drawing.Point(490, 6);
+            this.CompanyName.Name = "CompanyName";
+            this.CompanyName.Size = new System.Drawing.Size(332, 30);
+            this.CompanyName.TabIndex = 7;
+            this.CompanyName.Text = "Somalia International Blood Bank";
+            // 
+            // userIcon
+            // 
+            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
+            this.userIcon.ImageRotate = 0F;
+            this.userIcon.Location = new System.Drawing.Point(18, 7);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userIcon.Size = new System.Drawing.Size(30, 30);
+            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userIcon.TabIndex = 7;
+            this.userIcon.TabStop = false;
+            this.userIcon.Click += new System.EventHandler(this.userIcon_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 8;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // reports1
             // 
@@ -488,11 +490,11 @@
             this.Load += new System.EventHandler(this.Dash_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
